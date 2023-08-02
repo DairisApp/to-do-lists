@@ -9,33 +9,38 @@
 </head>
 
 <body>
-    <div class="flex justify-center" name="heading-container">
-        <h1 class=" bg-slate-200 rounded-full text-4xl font-normal my-5 px-5 pt-1 pb-3" name="heading">Create new list
+    <heading name="heading-container" class="flex justify-center">
+        <h1 name="heading" class="bg-slate-200 rounded-full text-4xl font-normal my-5 px-5 pt-1 pb-3">Create new list
         </h1>
-    </div>
+    </heading>
 
-    <div class="flex justify-center" name="form-container">
+    <div name="form-container" class="flex justify-center">
 
-        <form class="bg-slate-200 rounded-md border border-slate-700 p-4 w-2/5" id="list-form">
+        <form id="list-form" name="list-form" class="bg-slate-200 rounded-md border border-slate-700 p-4 w-2/5">
 
             <div>
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="title">Title</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="title" name="title" placeholder="Enter the title of the list . . .">
+                <label for="title" class="block text-gray-700 text-sm font-bold mb-2">Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter the title of the list . . ." class="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
 
             <div>
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="description">Description</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="description" name="description" placeholder="Enter the description . . .">
+                <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Description</label>
+                <input type="text" id="description" name="description" placeholder="Enter the description . . ." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
 
         </form>
-        
+
     </div>
-    <div class="flex justify-center my-5" id="button-container">
+
+    <div class="flex justify-center my-5" id="btn-container" name="btn-container">
+
         <div class="flex justify-between w-2/5">
-            <a class="flex-shrink-0 border-transparent border-4 text-slate-500 hover:text-slate-800 text-sm py-1 px-2 rounded" href="index.php">Back</a>
-            <input class="flex-shrink-0 bg-slate-200 hover:bg-slate-400 border-slate-200 hover:border-slate-400 text-sm border-4 text-slate-700 py-1 px-2 rounded" type="submit" id="form-submit" for="list-form" value="Create">
+
+            <a href="index.php" class="flex-shrink-0 border-transparent border-4 text-slate-500 hover:text-slate-800 text-sm py-1 px-2 rounded">Back</a>
+            <input type="submit" id="form-submit" name="form-submit" for="list-form" value="Create" class="flex-shrink-0 bg-slate-200 hover:bg-slate-400 border-slate-200 hover:border-slate-400 text-sm border-4 text-slate-700 py-1 px-2 rounded">
+
         </div>
+
     </div>
 
 </body>
