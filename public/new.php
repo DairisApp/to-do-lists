@@ -37,7 +37,7 @@
         <div class="flex justify-between w-2/5">
 
             <a href="index.php" class="flex-shrink-0 border-transparent border-4 text-slate-500 hover:text-slate-800 text-sm py-1 px-2 rounded">Back</a>
-            <input type="submit" id="form-submit" name="form-submit" for="list-form" value="Create" class="flex-shrink-0 bg-slate-200 hover:bg-slate-400 border-slate-200 hover:border-slate-400 text-sm border-4 text-slate-700 py-1 px-2 rounded">
+            <input type="submit" id="form-submit" name="form-submit" form="list-form" value="Create" class="flex-shrink-0 bg-slate-200 hover:bg-slate-400 border-slate-200 hover:border-slate-400 text-sm border-4 text-slate-700 py-1 px-2 rounded">
 
         </div>
 
