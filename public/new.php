@@ -16,7 +16,7 @@
 
     <div name="form-container" class="flex justify-center">
 
-        <form id="list-form" name="list-form" class="bg-slate-200 rounded-md border border-slate-700 p-4 w-2/5">
+        <form id="list-form" name="list-form" action="../src/controller/form_controller.php" method="post" class="bg-slate-200 rounded-md border border-slate-700 p-4 w-2/5">
 
             <div>
                 <label for="title" class="block text-gray-700 text-sm font-bold mb-2">Title</label>
