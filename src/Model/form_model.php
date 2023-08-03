@@ -59,5 +59,16 @@ class form_model
 
     public function displayData()
     {
+        $database = new Database();
+        $pdo = $database->pdo();
+    
+        // Retrieve data from the "lists" table
+        $sql = "SELECT * FROM lists";
+        $statement = $pdo->prepare($sql);
+        $statement->execute();
+    
+        // Fetch all rows as an associative array
+        $items = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $items;
     }
 }
