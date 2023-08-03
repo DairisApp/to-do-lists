@@ -7,7 +7,7 @@ class Database
     private $host = "localhost";
     private $user = "root";
     private $pwd = "";
-    private $db = "list_items";
+    private $db = "todo";
 
     public function pdo()
     {
