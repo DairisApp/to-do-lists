@@ -67,7 +67,7 @@ class form_model
         $statement = $pdo->prepare($sql);
         $statement->execute();
     
-        // Fetch all rows as an associative array
+        // Fetch's all rows as an associative array and returns them as $items
         $items = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $items;
     }
