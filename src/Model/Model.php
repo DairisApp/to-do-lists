@@ -42,20 +42,21 @@ class Model
         $statement->execute();
     }
 
-    public function editData($id, $title, $description)
+    public function editData($id, $title, $description, $date)
     {
          // Create a connection to the Database
          $database = new Database();
          $pdo = $database->pdo();
 
          // Prepare the SQL query using placeholders for values
-         $sql ="UPDATE lists SET title = :title, description = :description WHERE id =:id";
+         $sql ="UPDATE lists SET title = :title, description = :description, date = :date WHERE id =:id";
          $statement = $pdo->prepare($sql);
 
           // Bind the parameter to the placeholder od respective variables
         $statement->bindParam(':id', $id, PDO::PARAM_INT);
         $statement->bindParam(':title', $title, PDO::PARAM_STR);
         $statement->bindParam(':description', $description, PDO::PARAM_STR);
+        $statement->bindParam(':date', $date, PDO::PARAM_STR);
 
         $statement->execute();
     }
@@ -74,4 +75,21 @@ class Model
         $items = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $items;
     }
+
+    public function displayItem($id)
+    {
+        $database = new Database();
+        $pdo = $database->pdo();
+    
+        // Retrieve data from the "lists" table
+        $sql = "SELECT * FROM lists WHERE id = :id";
+        $statement = $pdo->prepare($sql);
+        $statement->bindParam(':id', $id, PDO::PARAM_INT);
+
+        $statement->execute();
+    
+        $item = $statement->fetch(PDO::FETCH_ASSOC);
+        return $item;
+    }
+
 }
