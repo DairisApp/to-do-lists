@@ -1,7 +1,10 @@
 <?php
+
+namespace src\controller;
+
 date_default_timezone_set('Europe/Riga');
 
-class FormController
+class Controller
 {
     public function saveNewItems()
     {
@@ -15,6 +18,6 @@ class FormController
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $call = new FormController;
+    $call = new Controller;
     $call->saveNewItems();
 }

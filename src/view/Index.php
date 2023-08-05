@@ -1,7 +1,16 @@
 <?php
-class IndexView {
+
+namespace src\view;
+
+use src\model\Model;
+
+class Index {
   
     public function renderItems($items) {
+        
+        $items = new Model();
+
+
         // HTML template for displaying database information
         // Same content as index.html, but within a PHP method
 

@@ -1,8 +1,11 @@
 <?php
 
-// use src/model/databse;
+namespace src\model;
 
-class form_model
+use src\model\Databse;
+use PDO;
+
+class Model
 {
     public function addData($title, $description)
     {
