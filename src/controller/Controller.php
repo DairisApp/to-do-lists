@@ -2,18 +2,22 @@
 
 namespace src\controller;
 
-date_default_timezone_set('Europe/Riga');
+use src\model\Model;
+
+
 
 class Controller
 {
     public function saveNewItems()
     {
         // Assing the variable corresponding values
+        date_default_timezone_set('Europe/Riga');
         $title = $_POST["title"];
         $description = $_POST["description"];
         $date = date('Y-m-d H:i:s');
 
-        //Call model method that rqeuires variable to be added to the database
+        $saveItems = new Model();
+        $saveItems->addData($title, $description, $date);
     }
 }
 

@@ -7,7 +7,7 @@ use PDO;
 
 class Model
 {
-    public function addData($title, $description)
+    public function addData($title, $description, $date)
     {
         // Create a connection to the Database
         $database = new Database();
